@@ -10,6 +10,14 @@ export const metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
+function TopNav () {
+  return (
+    <nav className="flex items-center justify-between w-full text-xl font-semibold border-b bg-slate-800 text-white p-4">
+        <div>Gallery</div>
+        <div>Sign In</div>
+    </nav>
+  )
+}
 export default function RootLayout({
   children,
 }: {
@@ -18,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
+        <TopNav />
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>
